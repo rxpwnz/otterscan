@@ -52,7 +52,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install-deps": "npm install",
-    "setup": "npm install && npm start"
+    "setup": "npm install && npm start",
     "source-map-explorer": "source-map-explorer build/static/js/*.js",
     "assets-start": "docker run --rm -p 5175:80 --name otterscan-assets -d otterscan/otterscan-assets:v1.0.1",
     "assets-stop": "docker stop otterscan-assets",
