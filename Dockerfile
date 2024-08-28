@@ -7,7 +7,8 @@ COPY --link ["public", "/otterscan-build/public/"]
 COPY --link ["src", "/otterscan-build/src/"]
 # Debugging build step
 #RUN npm run build || { echo "Build failed"; exit 1; }
-RUN npm run-script build
+RUN npm run assets-start
+RUN npm install
 # Add brotli module to official nginx image
 # Based on: https://github.com/nginxinc/docker-nginx/tree/master/modules
 FROM nginx:1.21.3-alpine AS nginxbuilder
