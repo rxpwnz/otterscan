@@ -6,8 +6,8 @@ COPY --link ["run-nginx.sh", "tsconfig.json", "tsconfig.node.json", "postcss.con
 COPY --link ["public", "/otterscan-build/public/"]
 COPY --link ["src", "/otterscan-build/src/"]
 # Debugging build step
-RUN npm run build || { echo "Build failed"; exit 1; }
-
+#RUN npm run build || { echo "Build failed"; exit 1; }
+RUN npm run-script build
 # Add brotli module to official nginx image
 # Based on: https://github.com/nginxinc/docker-nginx/tree/master/modules
 FROM nginx:1.21.3-alpine AS nginxbuilder
