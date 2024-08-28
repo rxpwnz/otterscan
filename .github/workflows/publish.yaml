@@ -4,7 +4,7 @@ on:
     types: [published]
   push:
     branches:
-      - main
+      - develop
       - '*'
 
 env:
@@ -28,8 +28,10 @@ jobs:
         run: npx prettier -c .
       - name: Build Otterscan
         run: npm run build
-        
+
   cns_publish:
+    runs-on: ubuntu-latest
+    steps:
       - name: "Install Yarn"
         run: |
           npm install -g yarn
