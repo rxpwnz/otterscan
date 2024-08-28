@@ -22,6 +22,8 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
+      - name: Set environment variable
+        run: echo "CERC_BUILD_TOOL=npm" >> $GITHUB_ENV
       - name: Install packages
         run: npm ci
       - name: Run prettier
