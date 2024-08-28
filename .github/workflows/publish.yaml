@@ -34,7 +34,6 @@ jobs:
         run: |
           npm install -g yarn
           npm install -g typescript
-
       - name: "Install registry CLI"
         run: |
           npm config set @cerc-io:registry https://git.vdb.to/api/packages/cerc-io/npm/
