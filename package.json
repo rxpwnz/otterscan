@@ -47,12 +47,10 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "install-deps": "npm install",
-    "setup": "npm install && npm start",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest",
     "source-map-explorer": "source-map-explorer build/static/js/*.js",
     "assets-start": "docker run --rm -p 5175:80 --name otterscan-assets -d otterscan/otterscan-assets:v1.0.1",
     "assets-stop": "docker stop otterscan-assets",
